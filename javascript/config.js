@@ -104,13 +104,15 @@ var zh_windowCount = 0,
 /*----------------------------*****************----------------------------*/
 /*----------------------------*---App---Data--*----------------------------*/
 /*----------------------------*****************----------------------------*/
+//http://www.google.com/favicon.ico
  	zh_leftIcon = [
-		{id:'leftIcon1',pos:'left',title:'vbooking团队项目',src:'images/github.jpg',webSrc:'http://vbooking.github.com',iWidth:950,iHeight:660,minWidth:800,minHeight:600},
-		{id:'leftIcon2',pos:'left',title:'携程旅行网',src:'images/ctrip.png',webSrc:'http://ctrip.com/',iWidth:1100,iHeight:500,iLeft:100},
-		{id:'leftIcon4',pos:'left',title:'携程度假',src:'images/c_logo2013.png',webSrc:'http://v.ctrip.com/',iLeft:200,iHeight:500},
-		{id:'leftIcon3',pos:'left',title:'新浪微博',src:'images/sina.png',webSrc:'http://www.weibo.com/u/2000508384?wvr=5'},				
+		{id:'leftIcon1',pos:'left',title:'github',src:'images/github.jpg',webSrc:'http://www.github.com/cody0755',iWidth:950,iHeight:660,minWidth:800,minHeight:600},
+		{id:'leftIcon2',pos:'left',title:'百度网盘',src:'http://www.baidu.com/favicon.ico',webSrc:'http://yun.baidu.com/',iWidth:1100,iHeight:500,iLeft:100},
+		{id:'leftIcon4',pos:'left',title:'115网盘',src:'http://www.115.com/favicon.ico',webSrc:'http://www.115.com/',iLeft:200,iHeight:500},
+		{id:'leftIcon3',pos:'left',title:'新浪微博',src:'images/sina.png',webSrc:'http://weibo.com/1931492552/profile?topnav=1&wvr=5&user=1'},				
 		{id:'leftIcon6',pos:'left',title:'腾讯微博',src:'images/left6.png',webSrc:'http://dev.t.qq.com/'},
-		{id:'leftIcon5',pos:'left',title:'QQ邮箱',src:'images/left5.png',webSrc:'https://mail.qq.com/cgi-bin/loginpage'}
+		{id:'leftIcon5',pos:'left',title:'163邮箱',src:'http://mail.163.com/favicon.ico',webSrc:'http://mail.163.com'},
+		{id:'leftIcon5',pos:'left',title:'sina邮箱',src:'http://mail.sina.com/favicon.ico',webSrc:'http://mail.sina.com'}
 	]
  	zh_deskIcon = [
 		[
@@ -128,7 +130,7 @@ var zh_windowCount = 0,
 			{id:'icon10',src:'images/add.png',title:'添加',isOpen:'no'}
 		],
 		[
-			{id:'icon1',src:'images/27.png',title:'vbooking项目',webSrc:'http://vbooking.github.com',iWidth:1000,iHeight:500},
+			{id:'icon1',src:'images/27.png',title:'github',webSrc:'http://www.github.com',iWidth:1000,iHeight:500},
 			{id:'icon2',src:'images/jquery.png',title:'jquery',webSrc:'http://www.jquery.com',iWidth:800,iHeight:500},
 			{id:'icon3',src:'images/nodejs.png',title:'nodejs',webSrc:'http://www.nodejs.org/',iHeight:550},
 			{id:'icon4',src:'images/mongodb.png',title:'mongodb',webSrc:'http://www.mongodb.org',iWidth:950,iHeight:660,minWidth:800,minHeight:600},

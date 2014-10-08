@@ -1,7 +1,3 @@
-/* 
- *  样式工具模块
-*/
- 
 define(function(require, exports, module){
 	var $ = require('lib/zepto/zepto');
 

@@ -1,7 +1,3 @@
-/* 
- *  对象工具模块
- */
- 
 define(function(require, exports, module){ 
 
 	//对象工具类

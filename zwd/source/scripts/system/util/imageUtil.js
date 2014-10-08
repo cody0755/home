@@ -1,7 +1,3 @@
-/* 
- *  图片工具模块
-*/
- 
 define(function(require, exports, module){
 
 	//imageUtil模块

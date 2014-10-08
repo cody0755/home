@@ -102,7 +102,8 @@ define(function(require, exports, module){
 					//初始化伸缩动画滚动
 					$img.css('-webkit-animation', panoramaImgID + '_default 16s linear infinite');
 				}
-
+				var fh=$panoramaImg.attr('fullheight');
+        if (fh) {fh=window.innerHeight -fh;$panoramaImg.css('height',fh+'px;');}
 				//注册点击事件
 				if (!$panoramaImg.is('.noClick'))
 				$panoramaImg.on($.isPC ? 'click' : 'tap', function (e) {

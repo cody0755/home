@@ -1,7 +1,3 @@
-// JavaScript Document
-//2013-4-9
-//Email:zhou060806@163.com
-
 function firstChild(oParent){							//第一个子元素;
 	return oParent.firstElementChild || oParent.firstChild;
 }

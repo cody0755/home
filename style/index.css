@@ -1,8 +1,3 @@
-/* CSS Document */
-/*2013-4-8*/
-/*Contact Emial: zhou060806@163.com*/
-
-
 html,body{ position:relative; overflow:hidden;}
 /*------------------leftbar css----------------------*/
 .wrap{height:768px;width:1366px;position:relative; z-index:1;}
@@ -23,7 +18,7 @@ html,body{ position:relative; overflow:hidden;}
 .voice:hover{background:url(../images/leftl1.png) left -81px no-repeat; }
 .setting{ background:url(../images/leftl2.png) left -8px no-repeat;}
 .setting:hover{ background:url(../images/leftl2.png) left -80px no-repeat;}
-.setbground{ background:url(../images/leftl2.png) left -43px no-repeat}
+.setbground{ margin-left:8px; height:36px; width:36px;background:url(../images/leftl2.png) left -43px no-repeat}
 .setbground:hover{ background:url(../images/leftl2.png) left -120px no-repeat}
 .Qguide{ margin-left:8px; height:36px; width:36px; background:url(../images/left_Q.png) left top no-repeat}
 .Qguide:hover{ background:url(../images/left_Q.png) left -63px no-repeat}

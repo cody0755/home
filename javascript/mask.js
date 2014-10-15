@@ -1,6 +1,3 @@
-//2012.3.11
-//Email:wchaowu@163.com
-
 var moveTimer = null;//动态屏保
 
 var screenTimer = null;//屏保显示

@@ -1,8 +1,3 @@
-// JavaScript 
-//2012-7-15
-//Email: wchaowu@163.com
-
-/*---------------------------------------------index.js--------------------------------------*/
 function desk(){
 	this.oWrap = $('#wrap');
 	this.oDesk = $('#desk');
@@ -708,7 +703,6 @@ desk.prototype = {
 };
 
 /*------------------------------------------------APP---------------------------------------*/
-
 function createIcon(winParent,appParent,oTask,json){					//APP
 	this.winParent = winParent;
 	this.appParent = appParent;
@@ -717,6 +711,7 @@ function createIcon(winParent,appParent,oTask,json){					//APP
 	this.iconId = json.id;
 	this.imgSrc = json.src;
 	this.title = json.title;
+	if (json.desc) this.desc=json.desc;
 	this.isOpen = json.isOpen || 'yes';
 	this.iconClass = json.className||zh_className;
 	this.isClick = false;
@@ -738,7 +733,7 @@ createIcon.prototype = {												//初始化
 		this.icontitle = document.createElement('a');
 		this.icoDelete = document.createElement('div');
 				
-		this.iconImg.title = this.title;
+		this.iconImg.title = this.desc||this.title;
 		this.img.src = this.imgSrc;
 		this.icontitle.innerHTML = this.title;
 		

@@ -1,9 +1,3 @@
-// JavaScript config
-//2012.4.13
-//Email:wuchaowu@163.com
-/*----------------------------*****************----------------------------*/
-/*----------------------------*--基础数据 config--*----------------------------*/
-/*----------------------------*****************----------------------------*/
 var zh_windowCount = 0,
 	zh_winzIndex = 10000,
 	zh_appzIndex = 1,
@@ -106,9 +100,9 @@ var zh_windowCount = 0,
 /*----------------------------*****************----------------------------*/
 //http://www.google.com/favicon.ico
  	zh_leftIcon = [
+		{id:'leftIcon4',pos:'left',title:'真味多',src:'images/zwdlogo_f.png',webSrc:'http://www.shenzhenqh.com/zwd',iTop:10,iLeft:200,iHeight:600,minWidth:300,minHeight:600},
 		{id:'leftIcon1',pos:'left',title:'github',src:'images/github.jpg',webSrc:'http://www.github.com/cody0755',iWidth:950,iHeight:660,minWidth:800,minHeight:600},
-		{id:'leftIcon2',pos:'left',title:'百度网盘',src:'http://www.baidu.com/favicon.ico',webSrc:'http://yun.baidu.com/',iWidth:1100,iHeight:500,iLeft:100},
-		{id:'leftIcon4',pos:'left',title:'115网盘',src:'http://www.115.com/favicon.ico',webSrc:'http://www.115.com/',iLeft:200,iHeight:500},
+		{id:'leftIcon2',pos:'left',title:'网盘搜索',src:'http://so.baiduyun.me/images/yunlogo.png',webSrc:'http://so.baiduyun.me',iWidth:1100,iHeight:500,iLeft:100},
 		{id:'leftIcon3',pos:'left',title:'新浪微博',src:'images/sina.png',webSrc:'http://weibo.com/1931492552/profile?topnav=1&wvr=5&user=1'},				
 		{id:'leftIcon6',pos:'left',title:'腾讯微博',src:'images/left6.png',webSrc:'http://dev.t.qq.com/'},
 		{id:'leftIcon5',pos:'left',title:'163邮箱',src:'http://mail.163.com/favicon.ico',webSrc:'http://mail.163.com'},
@@ -116,15 +110,14 @@ var zh_windowCount = 0,
 	]
  	zh_deskIcon = [
 		[
-			{id:'icon2',src:'images/13.png',title:'iteye',webSrc:'http://www.iteye.com'},
-			{id:'icon1',src:'images/cnblogs.png',title:'博客圆',webSrc:'http://www.cnblogs.com'},			
-			{id:'icon3',src:'images/oschina.png',title:'oschina',webSrc:'http://www.oschina.net'},
-			{id:'icon4',src:'images/add.png',title:'添加',isOpen:'no'}
+			{id:'icon2',src:'images/zwd_logo64.png',title:'gomockingbird(Web原型)',desc:'一个快速在Web上进行原型制作的工具',webSrc:'https://gomockingbird.com/'},
+			{id:'icon1',src:'images/zwd_logo64.png',title:'typecastapp(字体)',desc:'TypeCast让你可以从Fonts.com、TypeKit、FontDeck和Google这些字体供应和商选择字体，而且能非常方便的比较这些字体使用效果。如果你想获得用户对这些字体效果的反馈，只需要发布一个URL就可以了。这样，无需实际购买的字体，直到你已经决定在最终的解决方案。',webSrc:'http://beta.typecastapp.com/'},			
+			{id:'icon3',src:'images/zwd_logo64.png',title:'配色工具',desc:'配色工具，非常小清新',webSrc:'http://nipponcolors.com/'}
 		],
 		[
 		
-			{id:'icon10',src:'images/13.png',title:'芒果旅游',webSrc:'http://www.mangocity.com/webqq/bookFlight.html'},
-			{id:'icon10',src:'images/9.png',title:'快递查询',webSrc:'http://kuaidi100.com/frame/app/index.html'},
+			{id:'icon10',src:'images/zwd_logo64.png',title:'html-js',webSrc:'http://www.html-js.com/'},
+			{id:'icon10',src:'images/zwd_logo64.png',title:'课件',webSrc:'http://www.imooc.com/'},
 			{id:'icon10',src:'images/14.png',title:'团购地图',webSrc:'http://web.qq.com/app/tuangoumap/index.html'},
 			{id:'icon8',src:'images/4.png',title:'豆瓣FM',webSrc:'http://douban.fm/partner/qq_plus',iWidth:550,iHeight:460,minWidth:400,minHeight:200},
 			{id:'icon10',src:'images/add.png',title:'添加',isOpen:'no'}

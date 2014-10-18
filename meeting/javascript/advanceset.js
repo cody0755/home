@@ -1,17 +1,17 @@
 
-//ÊÓÆµ²ÎÊı½çÃæÏÂÀ­¿ò
-var code_rate_txt = ["ÖÊÁ¿Ä£Ê½", "40Kbps", "60Kbps", "100Kbps", "150Kbps", "200Kbps", "300Kbps", "400Kbps", "500Kbps", "600Kbps", "800Kbps", "1000Kbps", "1200Kbps", "1500Kbps"]; // ÂëÂÊÏÂÀ­¿ò
-var quality_txt = ["ÆÕÍ¨ÊÓÆµÖÊÁ¿", "ÖĞµÈÊÓÆµÖÊÁ¿", "½ÏºÃÊÓÆµÖÊÁ¿"]; // ÖÊÁ¿ÏÂÀ­¿ò
-var resolution_txt = ["176x144", "320x240", "352x288", "640x480", "720x480", "720x576", "800x600", "960x720", "1024x576", "1280x720", "1280x1024", "1920x1080"]; // ·Ö±æÂÊÏÂÀ­¿ò
-var frame_rate_txt = ["5 FPS", "8 FPS", "12 FPS", "15 FPS", "20 FPS", "25 FPS", "30 FPS"]; // Ö¡ÂÊÏÂÀ­¿ò
-var preinstall_txt = ["1", "2", "3", "4", "5"]; // Ô¤ÉèÏÂÀ­¿ò
-var speakmode_txt = ["·¢ÑÔÄ£Ê½(Ä¬ÈÏ)", "·Å¸èÄ£Ê½", "¿¨À­OKÄ£Ê½", "ÏßÂ·ÊäÈëÄ£Ê½"]; // ÒôÆµÄ£Ê½ÏÂÀ­¿ò
+//è§†é¢‘å‚æ•°ç•Œé¢ä¸‹æ‹‰æ¡†
+var code_rate_txt = ["è´¨é‡æ¨¡å¼", "40Kbps", "60Kbps", "100Kbps", "150Kbps", "200Kbps", "300Kbps", "400Kbps", "500Kbps", "600Kbps", "800Kbps", "1000Kbps", "1200Kbps", "1500Kbps"]; // ç ç‡ä¸‹æ‹‰æ¡†
+var quality_txt = ["æ™®é€šè§†é¢‘è´¨é‡", "ä¸­ç­‰è§†é¢‘è´¨é‡", "è¾ƒå¥½è§†é¢‘è´¨é‡"]; // è´¨é‡ä¸‹æ‹‰æ¡†
+var resolution_txt = ["176x144", "320x240", "352x288", "640x480", "720x480", "720x576", "800x600", "960x720", "1024x576", "1280x720", "1280x1024", "1920x1080"]; // åˆ†è¾¨ç‡ä¸‹æ‹‰æ¡†
+var frame_rate_txt = ["5 FPS", "8 FPS", "12 FPS", "15 FPS", "20 FPS", "25 FPS", "30 FPS"]; // å¸§ç‡ä¸‹æ‹‰æ¡†
+var preinstall_txt = ["1", "2", "3", "4", "5"]; // é¢„è®¾ä¸‹æ‹‰æ¡†
+var speakmode_txt = ["å‘è¨€æ¨¡å¼(é»˜è®¤)", "æ”¾æ­Œæ¨¡å¼", "å¡æ‹‰OKæ¨¡å¼", "çº¿è·¯è¾“å…¥æ¨¡å¼"]; // éŸ³é¢‘æ¨¡å¼ä¸‹æ‹‰æ¡†
 
-var bitrate_combo_value = [0, 40000, 60000, 100000, 150000, 200000, 300000, 400000, 500000, 600000, 800000, 1000000, 1200000, 1500000]; // ÂëÂÊÖµ
-var quality_combo_value= [2, 3, 4]; // ÖÊÁ¿Òò×ÓÖµ
-var framerate_combo_value= [5, 8, 12, 15 , 20 , 25 , 30 ]; // Ö¡ÂÊÖµ
-var videopreset_combo_value= [1, 2, 3, 4, 5]; // Ô¤Éè²ÎÊıÖµ
-var speakmode_combo_value= [0, 1, 2, 3]; // ÒôÆµÄ£Ê½Öµ
+var bitrate_combo_value = [0, 40000, 60000, 100000, 150000, 200000, 300000, 400000, 500000, 600000, 800000, 1000000, 1200000, 1500000]; // ç ç‡å€¼
+var quality_combo_value= [2, 3, 4]; // è´¨é‡å› å­å€¼
+var framerate_combo_value= [5, 8, 12, 15 , 20 , 25 , 30 ]; // å¸§ç‡å€¼
+var videopreset_combo_value= [1, 2, 3, 4, 5]; // é¢„è®¾å‚æ•°å€¼
+var speakmode_combo_value= [0, 1, 2, 3]; // éŸ³é¢‘æ¨¡å¼å€¼
 
 var mVideoWidthValue = 320;
 var mVideoHeightValue = 240;
@@ -21,7 +21,7 @@ var mVideoQualityValue = 3;
 var mVideoPresetValue = 3;
 
 
-//Ìî³äÏÂÀ­¿òÖµ
+//å¡«å……ä¸‹æ‹‰æ¡†å€¼
 function filltheselect(id, txtArray,valueArray) {
     GetID(id).options.length = 0;
     for (var j = 0; j < txtArray.length; j++) {
@@ -31,86 +31,86 @@ function filltheselect(id, txtArray,valueArray) {
         option.text = txtArray[j];
     }
 }
-// ³õÊ¼»¯¸ß¼¶ÉèÖÃ½çÃæËùÓĞ¿Ø¼ş ½øĞĞ¸³Öµ
+// åˆå§‹åŒ–é«˜çº§è®¾ç½®ç•Œé¢æ‰€æœ‰æ§ä»¶ è¿›è¡Œèµ‹å€¼
 function InitAdvanced() {
-    filltheselect("code_rate", code_rate_txt,bitrate_combo_value); 			// Ìî³äÂëÂÊÏÂÀ­¿ò
-    filltheselect("quality", quality_txt,quality_combo_value); 				// Ìî³äÖÊÁ¿ÏÂÀ­¿ò
-    filltheselect("distinguishability", resolution_txt,resolution_txt); 	// Ìî³ä·Ö±æÂÊÏÂÀ­¿ò
-    filltheselect("frame_rate", frame_rate_txt,framerate_combo_value); 		// Ìî³äÖ¡ÂÊÏÂÀ­¿ò
-    filltheselect("preinstall", preinstall_txt,videopreset_combo_value); 	// Ìî³äÔ¤ÉèÏÂÀ­¿ò
-    filltheselect("Speak_Mode", speakmode_txt,speakmode_combo_value); 		// ·¢ÑÔÄ£Ê½ÏÂÀ­¿ò
-    filltheselect("DeviceType_VideoCapture", BRAC_EnumDevices(BRAC_DEVICE_VIDEOCAPTURE), BRAC_EnumDevices(BRAC_DEVICE_VIDEOCAPTURE)); 		// ÊÓÆµ²É¼¯Éè±¸ÏÂÀ­¿òÖµ
-    filltheselect("DeviceType_AudioCapture", BRAC_EnumDevices(BRAC_DEVICE_AUDIOCAPTURE),BRAC_EnumDevices(BRAC_DEVICE_AUDIOCAPTURE)); 		// ÒôÆµ²É¼¯Éè±¸ÏÂÀ­¿òÖµ
-    filltheselect("DeviceType_AudioPlayBack", BRAC_EnumDevices(BRAC_DEVICE_AUDIOPLAYBACK), BRAC_EnumDevices(BRAC_DEVICE_AUDIOPLAYBACK)); 	// ÒôÆµ²¥·ÅÉè±¸ÏÂÀ­¿òÖµ
+    filltheselect("code_rate", code_rate_txt,bitrate_combo_value); 			// å¡«å……ç ç‡ä¸‹æ‹‰æ¡†
+    filltheselect("quality", quality_txt,quality_combo_value); 				// å¡«å……è´¨é‡ä¸‹æ‹‰æ¡†
+    filltheselect("distinguishability", resolution_txt,resolution_txt); 	// å¡«å……åˆ†è¾¨ç‡ä¸‹æ‹‰æ¡†
+    filltheselect("frame_rate", frame_rate_txt,framerate_combo_value); 		// å¡«å……å¸§ç‡ä¸‹æ‹‰æ¡†
+    filltheselect("preinstall", preinstall_txt,videopreset_combo_value); 	// å¡«å……é¢„è®¾ä¸‹æ‹‰æ¡†
+    filltheselect("Speak_Mode", speakmode_txt,speakmode_combo_value); 		// å‘è¨€æ¨¡å¼ä¸‹æ‹‰æ¡†
+    filltheselect("DeviceType_VideoCapture", BRAC_EnumDevices(BRAC_DEVICE_VIDEOCAPTURE), BRAC_EnumDevices(BRAC_DEVICE_VIDEOCAPTURE)); 		// è§†é¢‘é‡‡é›†è®¾å¤‡ä¸‹æ‹‰æ¡†å€¼
+    filltheselect("DeviceType_AudioCapture", BRAC_EnumDevices(BRAC_DEVICE_AUDIOCAPTURE),BRAC_EnumDevices(BRAC_DEVICE_AUDIOCAPTURE)); 		// éŸ³é¢‘é‡‡é›†è®¾å¤‡ä¸‹æ‹‰æ¡†å€¼
+    filltheselect("DeviceType_AudioPlayBack", BRAC_EnumDevices(BRAC_DEVICE_AUDIOPLAYBACK), BRAC_EnumDevices(BRAC_DEVICE_AUDIOPLAYBACK)); 	// éŸ³é¢‘æ’­æ”¾è®¾å¤‡ä¸‹æ‹‰æ¡†å€¼
     SetThePos();
     initControlSelected();
 }
-// ÒôÊÓÆµÉè±¸ °´Å¥»®³öĞ§¹û
+// éŸ³è§†é¢‘è®¾å¤‡ æŒ‰é’®åˆ’å‡ºæ•ˆæœ
 function SettingBtnMouseout(id) {
-    if (GetID(id).getAttribute("clickstate") == "false") // Ã»ÓĞ±»µã»÷µÄ°´Å¥¸Ä±ä±³¾°É«
+    if (GetID(id).getAttribute("clickstate") == "false") // æ²¡æœ‰è¢«ç‚¹å‡»çš„æŒ‰é’®æ”¹å˜èƒŒæ™¯è‰²
         GetID(id).style.backgroundColor = "#9CAAC1";
 }
-// ÒôÊÓÆµÉè±¸ °´Å¥»®ÈëĞ§¹û
+// éŸ³è§†é¢‘è®¾å¤‡ æŒ‰é’®åˆ’å…¥æ•ˆæœ
 function SettingBtnMouseover(id, dd) {
-    // Òş²ØËùÓĞ²ÎÊı½çÃæ
+    // éšè—æ‰€æœ‰å‚æ•°ç•Œé¢
     GetID("Device_Interface").style.display = "none";
     GetID("Video_Parameter_Interface").style.display = "none";
     GetID("Sound_Parameter_Interface").style.display = "none";
     GetID("Other_Parameter_Interface").style.display = "none";
-    // »ñµÃËÄ¸ö°´Å¥  ÖØĞÂ³õÊ¼»¯
+    // è·å¾—å››ä¸ªæŒ‰é’®  é‡æ–°åˆå§‹åŒ–
     var btn = GetID("advanceset_div_Div_Btn").getElementsByTagName("div");
     for (var i = 0; i < btn.length; i++) {
-        btn[i].style.backgroundColor = "#9CAAC1"; 		// ÉèÖÃ°´Å¥ÑÕÉ«
-        btn[i].setAttribute("clickstate", "false"); 	// ÉèÖÃ°´Å¥µã»÷×´Ì¬ÎªÎ´µã»÷
+        btn[i].style.backgroundColor = "#9CAAC1"; 		// è®¾ç½®æŒ‰é’®é¢œè‰²
+        btn[i].setAttribute("clickstate", "false"); 	// è®¾ç½®æŒ‰é’®ç‚¹å‡»çŠ¶æ€ä¸ºæœªç‚¹å‡»
     }
-    GetID(dd).setAttribute("clickstate", "true"); 		// ÉèÖÃ±»µã»÷µÄ°´Å¥×´Ì¬Îª±»µã»÷
-    GetID(dd).style.backgroundColor = "White"; 			// ÉèÖÃ°´Å¥±³¾°É«
-    GetID(id).style.display = "block"; 					// ÏÔÊ¾°´Å¥¶ÔÓ¦µÄ²ÎÊı½çÃæ
+    GetID(dd).setAttribute("clickstate", "true"); 		// è®¾ç½®è¢«ç‚¹å‡»çš„æŒ‰é’®çŠ¶æ€ä¸ºè¢«ç‚¹å‡»
+    GetID(dd).style.backgroundColor = "White"; 			// è®¾ç½®æŒ‰é’®èƒŒæ™¯è‰²
+    GetID(id).style.display = "block"; 					// æ˜¾ç¤ºæŒ‰é’®å¯¹åº”çš„å‚æ•°ç•Œé¢
 }
 
-// ÏÂÀ­¿òÊÂ¼ş
+// ä¸‹æ‹‰æ¡†äº‹ä»¶
 function GetTheValue(id) {
     var value = GetID(id).options[GetID(id).selectedIndex].value;
     switch (id) {
-        case "DeviceType_VideoCapture": // ÊÓÆµ²É¼¯Éè±¸
+        case "DeviceType_VideoCapture": // è§†é¢‘é‡‡é›†è®¾å¤‡
             BRAC_SelectVideoCapture(BRAC_DEVICE_VIDEOCAPTURE, value);
             break;
-        case "DeviceType_AudioCapture": // ÒôÆµ²É¼¯Éè±¸
+        case "DeviceType_AudioCapture": // éŸ³é¢‘é‡‡é›†è®¾å¤‡
             BRAC_SelectVideoCapture(BRAC_DEVICE_AUDIOCAPTURE, value);
             break;
-        case "DeviceType_AudioPlayBack":// ÒôÆµ²¥·ÅÉè±¸
+        case "DeviceType_AudioPlayBack":// éŸ³é¢‘æ’­æ”¾è®¾å¤‡
             BRAC_SelectVideoCapture(BRAC_DEVICE_AUDIOPLAYBACK, value);
             break;
-        case "quality": 				// ÖÊÁ¿
+        case "quality": 				// è´¨é‡
 			mVideoQualityValue= parseInt(value);
             break;
-        case "code_rate": 				// ÂëÂÊ
+        case "code_rate": 				// ç ç‡
 		    mBitRateValue=parseInt(value);
             break;
-        case "distinguishability": 		// ·Ö±æÂÊ
+        case "distinguishability": 		// åˆ†è¾¨ç‡
             var resolution = value.split('x');
 			mVideoWidthValue = parseInt(resolution[0]);
 			mVideoHeightValue = parseInt(resolution[1]);
 			break;
-        case "frame_rate": 				// Ö¡ÂÊ
+        case "frame_rate": 				// å¸§ç‡
 			mFrameRateValue=parseInt(value);
             break;
-        case "preinstall": 				// Ô¤Éè
+        case "preinstall": 				// é¢„è®¾
 			mVideoPresetValue=parseInt(value);
             break;
-        case "Speak_Mode": 				// ÒôÆµ²¥·ÅÄ£Ê½
+        case "Speak_Mode": 				// éŸ³é¢‘æ’­æ”¾æ¨¡å¼
             BRAC_SetSDKOption(BRAC_SO_AUDIO_CAPTUREMODE, parseInt(value));
             break;
     }
 }
-//  ¸´Ñ¡¿òÊÂ¼ş
+//  å¤é€‰æ¡†äº‹ä»¶
 function ChangeTheResult(id) {
     switch (id) {
-        case "ServerSetting": // ·şÎñÆ÷ÅäÖÃ²ÎÊı°´Å¥
+        case "ServerSetting": // æœåŠ¡å™¨é…ç½®å‚æ•°æŒ‰é’®
             var GetAControl = GetID("advanceset_div_Tab").getElementsByTagName("a");
-            var SelectTag = GetID("Video_Parameter_Interface").getElementsByTagName("select"); // È¡µÃ ÒôÆµ²ÎÊıÉèÖÃ ½çÃæ ËùÓĞselect±êÇ©
-            if (GetID("ServerSetting").checked == true) { // ±êÇ©µã»÷ÊÂ¼ş
-                for (var i = 0; i < SelectTag.length; i++) { // Ñ­»·±êÇ©
+            var SelectTag = GetID("Video_Parameter_Interface").getElementsByTagName("select"); // å–å¾— éŸ³é¢‘å‚æ•°è®¾ç½® ç•Œé¢ æ‰€æœ‰selectæ ‡ç­¾
+            if (GetID("ServerSetting").checked == true) { // æ ‡ç­¾ç‚¹å‡»äº‹ä»¶
+                for (var i = 0; i < SelectTag.length; i++) { // å¾ªç¯æ ‡ç­¾
                     SelectTag[i].disabled = "disabled";
                 }
                 for (var j = 0; j < GetAControl.length; j++)
@@ -129,25 +129,25 @@ function ChangeTheResult(id) {
             else 
 				BRAC_SetSDKOption(BRAC_SO_NETWORK_P2PPOLITIC, 0);
             break;
-        case "audio_vadctrl": // ¾²Òô¼ì²â
+        case "audio_vadctrl": // é™éŸ³æ£€æµ‹
             if (GetID(id).checked == true)
 				BRAC_SetSDKOption(BRAC_SO_NETWORK_P2PPOLITIC, 1);
             else 
 				BRAC_SetSDKOption(BRAC_SO_NETWORK_P2PPOLITIC, 0);
             break;
-        case "audio_echoctrl": // »ØÒôÏû³ı
+        case "audio_echoctrl": // å›éŸ³æ¶ˆé™¤
             if (GetID(id).checked == true)
 				BRAC_SetSDKOption(BRAC_SO_AUDIO_ECHOCTRL, 1);
             else 
 				BRAC_SetSDKOption(BRAC_SO_AUDIO_ECHOCTRL, 0);
             break;
-        case "audio_nsctrl": // ÔëÒôÒÖÖÆ
+        case "audio_nsctrl": // å™ªéŸ³æŠ‘åˆ¶
             if (GetID(id).checked == true)
 			 	BRAC_SetSDKOption(BRAC_SO_AUDIO_NSCTRL, 1);
             else 
 				BRAC_SetSDKOption(BRAC_SO_AUDIO_NSCTRL, 0);
             break;
-        case "audio_agcctrl": // ×Ô¶¯ÔöÒæ
+        case "audio_agcctrl": // è‡ªåŠ¨å¢ç›Š
             if (GetID(id).checked == true)
 				 BRAC_SetSDKOption(BRAC_SO_AUDIO_AGCCTRL, 1);
             else
@@ -156,30 +156,30 @@ function ChangeTheResult(id) {
     }
 }
 
-// »ñÈ¡µ±Ç°²ÎÊıÖµ
+// è·å–å½“å‰å‚æ•°å€¼
 function initControlSelected() {
-    GetIndex("DeviceType_VideoCapture", BRAC_EnumDevices(BRAC_DEVICE_VIDEOCAPTURE),BRAC_GetCurrentDevice(BRAC_DEVICE_VIDEOCAPTURE),"combobox"); // µ±Ç°Ê¹ÓÃµÄÊÓÆµ²É¼¯Æ÷
-    GetIndex("DeviceType_AudioCapture", BRAC_EnumDevices(BRAC_DEVICE_AUDIOCAPTURE),BRAC_GetCurrentDevice(BRAC_DEVICE_AUDIOCAPTURE),"combobox"); // µ±Ç°Ê¹ÓÃµÄÒôÆµ²É¼¯Æ÷
-	GetIndex("DeviceType_AudioPlayBack", BRAC_EnumDevices(BRAC_DEVICE_AUDIOPLAYBACK),BRAC_GetCurrentDevice(BRAC_DEVICE_AUDIOPLAYBACK),"combobox"); // µ±Ç°Ê¹ÓÃµÄÒôÆµ²¥·ÅÆ÷
-	GetIndex("quality", quality_combo_value,BRAC_GetSDKOptionInt(BRAC_SO_LOCALVIDEO_QUALITYCTRL),"combobox"); // µ±Ç°Ê¹ÓÃµÄÖÊÁ¿²ÎÊı
-	GetIndex("code_rate", bitrate_combo_value,BRAC_GetSDKOptionInt(BRAC_SO_LOCALVIDEO_BITRATECTRL),"combobox"); // µ±Ç°Ê¹ÓÃµÄÂëÂÊ²ÎÊı
-    GetIndex("distinguishability",resolution_txt, BRAC_GetSDKOptionInt(BRAC_SO_LOCALVIDEO_WIDTHCTRL) + "x" + 			BRAC_GetSDKOptionInt(BRAC_SO_LOCALVIDEO_HEIGHTCTRL), "combobox"); // µ±Ç°Ê¹ÓÃµÄµÄ·Ö±æÂÊ
-    GetIndex("frame_rate",framerate_combo_value, BRAC_GetSDKOptionInt(BRAC_SO_LOCALVIDEO_FPSCTRL), "combobox"); // µ±Ç°Ê¹ÓÃµÄµÄÖ¡ÂÊ²ÎÊı
-    GetIndex("preinstall", videopreset_combo_value,BRAC_GetSDKOptionInt(BRAC_SO_LOCALVIDEO_PRESETCTRL), "combobox"); // µ±Ç°Ê¹ÓÃµÄÔ¤Éè²ÎÊı
-    GetIndex("Speak_Mode",speakmode_combo_value, BRAC_GetSDKOptionInt(BRAC_SO_AUDIO_CAPTUREMODE), "combobox"); // µ±Ç°Ê¹ÓÃµÄÒôÆµ²¥·ÅÄ£Ê½
+    GetIndex("DeviceType_VideoCapture", BRAC_EnumDevices(BRAC_DEVICE_VIDEOCAPTURE),BRAC_GetCurrentDevice(BRAC_DEVICE_VIDEOCAPTURE),"combobox"); // å½“å‰ä½¿ç”¨çš„è§†é¢‘é‡‡é›†å™¨
+    GetIndex("DeviceType_AudioCapture", BRAC_EnumDevices(BRAC_DEVICE_AUDIOCAPTURE),BRAC_GetCurrentDevice(BRAC_DEVICE_AUDIOCAPTURE),"combobox"); // å½“å‰ä½¿ç”¨çš„éŸ³é¢‘é‡‡é›†å™¨
+	GetIndex("DeviceType_AudioPlayBack", BRAC_EnumDevices(BRAC_DEVICE_AUDIOPLAYBACK),BRAC_GetCurrentDevice(BRAC_DEVICE_AUDIOPLAYBACK),"combobox"); // å½“å‰ä½¿ç”¨çš„éŸ³é¢‘æ’­æ”¾å™¨
+	GetIndex("quality", quality_combo_value,BRAC_GetSDKOptionInt(BRAC_SO_LOCALVIDEO_QUALITYCTRL),"combobox"); // å½“å‰ä½¿ç”¨çš„è´¨é‡å‚æ•°
+	GetIndex("code_rate", bitrate_combo_value,BRAC_GetSDKOptionInt(BRAC_SO_LOCALVIDEO_BITRATECTRL),"combobox"); // å½“å‰ä½¿ç”¨çš„ç ç‡å‚æ•°
+    GetIndex("distinguishability",resolution_txt, BRAC_GetSDKOptionInt(BRAC_SO_LOCALVIDEO_WIDTHCTRL) + "x" + 			BRAC_GetSDKOptionInt(BRAC_SO_LOCALVIDEO_HEIGHTCTRL), "combobox"); // å½“å‰ä½¿ç”¨çš„çš„åˆ†è¾¨ç‡
+    GetIndex("frame_rate",framerate_combo_value, BRAC_GetSDKOptionInt(BRAC_SO_LOCALVIDEO_FPSCTRL), "combobox"); // å½“å‰ä½¿ç”¨çš„çš„å¸§ç‡å‚æ•°
+    GetIndex("preinstall", videopreset_combo_value,BRAC_GetSDKOptionInt(BRAC_SO_LOCALVIDEO_PRESETCTRL), "combobox"); // å½“å‰ä½¿ç”¨çš„é¢„è®¾å‚æ•°
+    GetIndex("Speak_Mode",speakmode_combo_value, BRAC_GetSDKOptionInt(BRAC_SO_AUDIO_CAPTUREMODE), "combobox"); // å½“å‰ä½¿ç”¨çš„éŸ³é¢‘æ’­æ”¾æ¨¡å¼
 	
-    GetIndex("audio_vadctrl", null,BRAC_GetSDKOptionInt(BRAC_SO_AUDIO_VADCTRL), "checkbox");// µ±Ç°Ê¹ÓÃµÄ¾²Òô¼ì²â
-    GetIndex("audio_echoctrl", null,BRAC_GetSDKOptionInt(BRAC_SO_AUDIO_ECHOCTRL), "checkbox"); // µ±Ç°Ê¹ÓÃµÄ»ØÒôÏû³ı
-    GetIndex("audio_nsctrl", null,BRAC_GetSDKOptionInt(BRAC_SO_AUDIO_NSCTRL), "checkbox"); // µ±Ç°Ê¹ÓÃµÄÔëÒôÒÖÖÆ
-    GetIndex("audio_agcctrl", null,BRAC_GetSDKOptionInt(BRAC_SO_AUDIO_AGCCTRL), "checkbox"); // µ±Ç°Ê¹ÓÃµÄ×Ô¶¯ÔöÒæ
+    GetIndex("audio_vadctrl", null,BRAC_GetSDKOptionInt(BRAC_SO_AUDIO_VADCTRL), "checkbox");// å½“å‰ä½¿ç”¨çš„é™éŸ³æ£€æµ‹
+    GetIndex("audio_echoctrl", null,BRAC_GetSDKOptionInt(BRAC_SO_AUDIO_ECHOCTRL), "checkbox"); // å½“å‰ä½¿ç”¨çš„å›éŸ³æ¶ˆé™¤
+    GetIndex("audio_nsctrl", null,BRAC_GetSDKOptionInt(BRAC_SO_AUDIO_NSCTRL), "checkbox"); // å½“å‰ä½¿ç”¨çš„å™ªéŸ³æŠ‘åˆ¶
+    GetIndex("audio_agcctrl", null,BRAC_GetSDKOptionInt(BRAC_SO_AUDIO_AGCCTRL), "checkbox"); // å½“å‰ä½¿ç”¨çš„è‡ªåŠ¨å¢ç›Š
     GetIndex("Checkbox_P2P", null,BRAC_GetSDKOptionInt(BRAC_SO_AUDIO_VADCTRL), "checkbox") ;// P2P
     GetID("current_resolution").innerHTML = BRAC_GetSDKOptionInt(BRAC_SO_LOCALVIDEO_WIDTHCTRL) + "x" + BRAC_GetSDKOptionInt(BRAC_SO_LOCALVIDEO_HEIGHTCTRL) + ")";
 }
 
 
-// ÉèÖÃ¿Ø¼ş³õÊ¼Öµ
+// è®¾ç½®æ§ä»¶åˆå§‹å€¼
 function GetIndex(control_id,valueArray,value,type) {
-    if (type == "combobox") { // ÏÂÀ­¿ò
+    if (type == "combobox") { // ä¸‹æ‹‰æ¡†
 		var valueIndex=0;
 		for(var i=0;i<valueArray.length;i++)
 		{
@@ -191,39 +191,39 @@ function GetIndex(control_id,valueArray,value,type) {
 		}
 		GetID(control_id).selectedIndex=valueIndex;
     }
-    else { // ¸´Ñ¡¿ò
-        if (value == 1) // 1Îª´ò¿ª 
+    else { // å¤é€‰æ¡†
+        if (value == 1) // 1ä¸ºæ‰“å¼€ 
             GetID(control_id).checked = true;
         else
             GetID(control_id).checked = false;
     }
 }
 
-// ÉèÖÃ ¸ß¼¶ÉèÖÃ½çÃæ x×ø±ê
+// è®¾ç½® é«˜çº§è®¾ç½®ç•Œé¢ xåæ ‡
 function SetThePos() {
     var TheBodyWidth = document.body.offsetWidth;
     GetID("advanceset_div").style.marginLeft = (TheBodyWidth - 464) / 2 + 87 + "px";
 }
-// ÏÔÊ¾ »­Ãæµ÷½Ú  ½çÃæ
+// æ˜¾ç¤º ç”»é¢è°ƒèŠ‚  ç•Œé¢
 function BtnAdjust() {
     BRAC_ShowLVProperty("");
 }
-// Ó¦ÓÃÉèÖÃ
+// åº”ç”¨è®¾ç½®
 function BtnApply() {
-	// ÉèÖÃ±¾µØÊÓÆµ±àÂëµÄÂëÂÊ£¨Èç¹ûÂëÂÊÎª0£¬Ôò±íÊ¾Ê¹ÓÃÖÊÁ¿ÓÅÏÈÄ£Ê½£©
+	// è®¾ç½®æœ¬åœ°è§†é¢‘ç¼–ç çš„ç ç‡ï¼ˆå¦‚æœç ç‡ä¸º0ï¼Œåˆ™è¡¨ç¤ºä½¿ç”¨è´¨é‡ä¼˜å…ˆæ¨¡å¼ï¼‰
 	BRAC_SetSDKOption(BRAC_SO_LOCALVIDEO_BITRATECTRL,mBitRateValue);
-	// ÉèÖÃ±¾µØÊÓÆµ±àÂëµÄÖÊÁ¿
+	// è®¾ç½®æœ¬åœ°è§†é¢‘ç¼–ç çš„è´¨é‡
 	BRAC_SetSDKOption(BRAC_SO_LOCALVIDEO_QUALITYCTRL,mVideoQualityValue);
-	// ÉèÖÃ±¾µØÊÓÆµ²É¼¯·Ö±æÂÊ
+	// è®¾ç½®æœ¬åœ°è§†é¢‘é‡‡é›†åˆ†è¾¨ç‡
 	BRAC_SetSDKOption(BRAC_SO_LOCALVIDEO_WIDTHCTRL, mVideoWidthValue);
     BRAC_SetSDKOption(BRAC_SO_LOCALVIDEO_HEIGHTCTRL, mVideoHeightValue);
-	// ÉèÖÃ±¾µØÊÓÆµ±àÂëµÄÖ¡ÂÊ
+	// è®¾ç½®æœ¬åœ°è§†é¢‘ç¼–ç çš„å¸§ç‡
 	BRAC_SetSDKOption(BRAC_SO_LOCALVIDEO_FPSCTRL,mFrameRateValue);
-	// ÉèÖÃ±¾µØÊÓÆµ±àÂëµÄ¹Ø¼üÖ¡¼ä¸ô
+	// è®¾ç½®æœ¬åœ°è§†é¢‘ç¼–ç çš„å…³é”®å¸§é—´éš”
 	BRAC_SetSDKOption(BRAC_SO_LOCALVIDEO_GOPCTRL, mFrameRateValue*4);
-	// ÉèÖÃÊÓÆµ±àÂëÔ¤Éè²ÎÊı£¨ÖµÔ½´ó£¬±àÂëÖÊÁ¿Ô½¸ß£¬Õ¼ÓÃCPU×ÊÔ´Ò²»áÔ½¸ß£©
+	// è®¾ç½®è§†é¢‘ç¼–ç é¢„è®¾å‚æ•°ï¼ˆå€¼è¶Šå¤§ï¼Œç¼–ç è´¨é‡è¶Šé«˜ï¼Œå ç”¨CPUèµ„æºä¹Ÿä¼šè¶Šé«˜ï¼‰
 	BRAC_SetSDKOption(BRAC_SO_LOCALVIDEO_PRESETCTRL,mVideoPresetValue);
-	// ÈÃÊÓÆµ²ÎÊıÉúĞ§
+	// è®©è§†é¢‘å‚æ•°ç”Ÿæ•ˆ
     BRAC_SetSDKOption(BRAC_SO_LOCALVIDEO_APPLYPARAM, 1);
     setTimeout(initControlSelected, 500);
 }

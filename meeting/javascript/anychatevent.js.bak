@@ -122,12 +122,7 @@ function OnAnyChatEnterRoom(dwRoomId, errorcode) {
 
 // 收到当前房间的在线用户信息，进入房间后触发一次，dwUserCount表示在线用户数（包含自己），dwRoomId表示房间ID
 function OnAnyChatRoomOnlineUser(dwUserCount, dwRoomId) {
-	AddLog("OnAnyChatRoomOnlineUser(count=" + dwUserCount + ", roomid=" + dwRoomId + ")", LOG_TYPE_EVENT);
-	var useridlist = BRAC_GetOnlineUser();
-	for (var i = 0; i < useridlist.length; i++) {
-		RoomUserListControl(useridlist[i], true);
-    }
-	comeToRequestedScrenn(2);  
+
 }
 
 // 用户进入（离开）房间，dwUserId表示用户ID号，bEnterRoom表示该用户是进入（1）或离开（0）房间

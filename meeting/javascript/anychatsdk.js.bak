@@ -262,7 +262,6 @@ function BRAC_InitSDK(apilevel) {
 		if(bRightVersion) {
 			insertdiv.removeChild(videoobj);
 			anychat = anychatobj;
-			BRAC_SetSDKOption(BRAC_SO_CORESDK_SCREENCAMERACTRL,1);
 			// 关联回调事件
 			if(typeof(OnAnyChatNotifyMessage) == "function")
 				BRAC_RegisterCallBack(anychat, 'OnNotifyMessage', 	OnAnyChatNotifyMessage);
@@ -285,7 +284,7 @@ function BRAC_InitSDK(apilevel) {
 			if(typeof(OnAnyChatRecordSnapShotEx) == "function" && bSupportStreamRecordCtrlEx)
 				BRAC_RegisterCallBack(anychat, 'OnRecordSnapShotEx', OnAnyChatRecordSnapShotEx);
 				
-	    
+	    BRAC_SetSDKOption(BRAC_SO_CORESDK_SCREENCAMERACTRL,1);
 		} else {
 			document.body.removeChild(insertdiv);
 		}

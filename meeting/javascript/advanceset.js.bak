@@ -39,8 +39,6 @@ function InitAdvanced() {
     filltheselect("frame_rate", frame_rate_txt,framerate_combo_value); 		// 填充帧率下拉框
     filltheselect("preinstall", preinstall_txt,videopreset_combo_value); 	// 填充预设下拉框
     filltheselect("Speak_Mode", speakmode_txt,speakmode_combo_value); 		// 发言模式下拉框
-    
-		BRAC_SetSDKOption(BRAC_SO_CORESDK_SCREENCAMERACTRL,1);
     filltheselect("DeviceType_VideoCapture", BRAC_EnumDevices(BRAC_DEVICE_VIDEOCAPTURE), BRAC_EnumDevices(BRAC_DEVICE_VIDEOCAPTURE)); 		// 视频采集设备下拉框值
     filltheselect("DeviceType_AudioCapture", BRAC_EnumDevices(BRAC_DEVICE_AUDIOCAPTURE),BRAC_EnumDevices(BRAC_DEVICE_AUDIOCAPTURE)); 		// 音频采集设备下拉框值
     filltheselect("DeviceType_AudioPlayBack", BRAC_EnumDevices(BRAC_DEVICE_AUDIOPLAYBACK), BRAC_EnumDevices(BRAC_DEVICE_AUDIOPLAYBACK)); 	// 音频播放设备下拉框值

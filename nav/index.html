@@ -1,0 +1,307 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>真味多网址导航</title>
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+<body>
+	<div id="wrap">
+        <div class="bg"><img src="images/bg.jpg" /></div>
+        <div id="container" class="main">
+            <!-- 搜索模块 -->
+            <div id="search">
+                <form target="_blank" action="" method="get" class="clear">
+                    <div class="engine">
+                        <a class="name" href="javascript:;">
+                            谷歌<span></span>
+                        </a>
+                        <div class="list">
+                            <a href="#" class="google active" data-name="google"><span></span>谷歌</a>
+                            <a href="#" class="baidu" data-name="baidu"><span></span>百度</a>
+                            <a href="#" class="sougou" data-name="sougou"><span></span>搜狗</a>
+                            <a href="#" class="taobao" data-name="taobao"><span></span>淘宝</a>
+                        </div>
+                    </div>
+                    <input type="search" name="q" id="s" />
+                    <button type="submit">搜索</button>
+                </form>
+            </div>
+            <!-- 导航模块 -->
+            <div id="dh"></div>
+        </div>
+        <div id="footer">
+            <div class="inner">
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var Themes={
+            'default':'images/bg.jpg',
+            grey:'images/grey.jpg',
+            lmcchpabdhdgdlmlokknkjcbgehmcibi:'images/bg.jpg'
+        },
+        DH=[
+        /*{
+                name:'主页',
+                data:[
+				            {title:'天猫商城',img:'images/tianmao.jpg',url:'http://s.click.taobao.com/t?e=zGU34CA7K%2BPkqB05%2Bm7rfGGjlY60oHcc7bkKOQiRddrNEyGLx31dnc6%2Fz%2BaQS2UNDUWpebTcEEjBuk1W5odmLS8%3D&pid=mm_26866744_2384196_9192963'},  
+                    {title:'新浪微博',img:'images/sina.png',url:'http://weibo.com/1931492552/profile?topnav=1&wvr=5&user=1'},  
+                    {title:'github',img:'images/github.jpg',url:'http://www.github.com/cody0755'}, 
+                    {title:'点名时间',img:'images/suning.jpg',url:'http://www.demohour.com'}, 
+                    {title:'追梦网',img:'images/yihaodian.jpg',url:'http://www.dreamore.com'},  
+                    {title:'众筹网',img:'images/taobao.jpg',url:'http://www.zhongchou.cn'},  
+                    {title:'JD+计划 ',img:'images/dangdangwang.jpg',url:'http://union.dangdang.com/transfer.php?from=P-288728-anquangou&ad_type=10&sys_id=1&backurl=http%3A%2F%2Fwww.dangdang.com'},  
+                    {title:'baidu inside',img:'images/juhuasuan.jpg',url:'http://inside.baidu.com'},  
+                    {title:'36kr',img:'images/yixunwang.jpg',url:'http://www.36kr.com'}, 
+                    {title:'雷锋网',img:'images/yixunwang.jpg',url:'http://www.leiphone.com'}, 
+                    {title:'奇酷网',img:'images/yamaxun.jpg',url:'http://www.qikoo.com'},  
+					          {title:'雷科技',img:'http://www.leikeji.com/resource/picture_static/logo.png',url:'http://www.leikeji.com'} ,
+					          {title:'真味多',img:'images/zwdlogo_f.png',url:'http://www.shenzhenqh.com/zwd'}
+                ]
+            },*/
+            {
+                name:'热门',
+                data:[
+				            {title:'天猫商城',img:'images/tianmao.jpg',url:'http://s.click.taobao.com/t?e=zGU34CA7K%2BPkqB05%2Bm7rfGGjlY60oHcc7bkKOQiRddrNEyGLx31dnc6%2Fz%2BaQS2UNDUWpebTcEEjBuk1W5odmLS8%3D&pid=mm_26866744_2384196_9192963'},  
+                    {title:'爱淘宝',img:'images/aitaobao.jpg',url:'http://ai.taobao.com'},  
+                    {title:'唯品会',img:'images/weipinhui.jpg',url:'http://www.vip.com'},  
+                    {title:'京东',img:'images/jingdong.jpg',url:'http://www.jd.com'}, 
+                    {title:'苏宁易购',img:'images/suning.jpg',url:'http://www.suning.com/'},  
+                    {title:'1号店',img:'images/yihaodian.jpg',url:'http://www.yhd.com'},  
+                    {title:'淘宝网',img:'images/taobao.jpg',url:'http://www.taobao.com'},  
+                    {title:'当当网',img:'images/dangdangwang.jpg',url:'http://www.dangdang.com'},  
+                    {title:'聚划算',img:'images/juhuasuan.jpg',url:'http://s.click.taobao.com/t?e=zGU34CA7K%2BPkqB05%2Bm7rfGKas1PIKp0U37pZuBotzOg7OjeU9mIWS5%2B5UROBz6sq4fiHePnGhf6UrWuOtfD2G6QGcAHIXpjhEtESpuqsRo0a&pid=mm_26866744_2384196_9192963'},  
+                    {title:'易迅网',img:'images/yixunwang.jpg',url:'http://www.yixun.com'},  
+                    {title:'亚马逊',img:'images/yamaxun.jpg',url:'http://www.amazon.cn'},  
+                    {title:'更多购物',img:'images/gengduogouwu.jpg',url:'http://gouwu.duba.com/index.html?f=lbaqg'}
+                ]
+            },
+            {
+                name:'购物',
+                data:[
+                    /* 12个栏目信息，下同*/                    
+                    {title:'聚划算',img:'images/juhuasuan.jpg',url:'http://s.click.taobao.com/t?e=zGU34CA7K%2BPkqB05%2Bm7rfGKas1PIKp0U37pZuBotzOg7OjeU9mIWS5%2B5UROBz6sq4fiHePnGhf6UrWuOtfD2G6QGcAHIXpjhEtESpuqsRo0a&pid=mm_26866744_2384196_9192963'},  
+                    {title:'银泰网',img:'images/yintai.jpg',url:'http://www.yintai.com'},  
+                    {title:'乐蜂网',img:'images/lefengwang.jpg',url:'http://www.lefeng.com/'},  
+                    {title:'聚美优品',img:'images/jumeiyoupin.jpg',url:'http://www.jumei.com/'}, 
+                    {title:'优购网',img:'images/yougou.jpg',url:'http://www.yougou.com/'},  
+                    {title:'麦包包',img:'images/maibaobao.jpg',url:'http://www.mbaobao.com'},  
+                    {title:'梦芭莎',img:'images/mengbasha.jpg',url:'http://www.moonbasa.com'},  
+                    {title:'天品网',img:'images/tianpinwang.jpg',url:'http://www.tianpin.com/'},  
+                    {title:'中粮我买网',img:'images/womaiwang.jpg',url:'http://www.womai.com'},  
+                    {title:'酒仙网',img:'images/jiuxianwang.jpg',url:'http://www.jiuxian.com/'},  
+                    {title:'国美在线',img:'images/guomei.jpg',url:'http://www.gome.com.cn/ec/homeus/index.html'},  
+                    {title:'更多购物',img:'images/gengduogouwu.jpg',url:'http://gouwu.duba.com/index.html?f=lbaqg'}
+                ]
+            },
+            {
+                name:'生活',
+                data:[
+                    /* 12个栏目信息，下同*/
+                    {title:'话费充值',img:'images/huafeichongzhi.jpg',url:'http://query.j-pay.cn/UnregPurchase/'},  
+                    {title:'彩票',img:'images/caipiao.jpg',url:'http://cp.duba.com/?f=lbaqg'},  
+                    {title:'快递查询',img:'images/kuaidichaxun.jpg',url:'http://gouwu.duba.com/kuaidichaxun.html?f=shouye'},  
+                    {title:'定外卖',img:'images/dingwaimai.jpg',url:'http://www.duba.com/yinshiyingyang.html'}, 
+                    {title:'今日团购',img:'images/jinrituangou.jpg',url:'http://tuan.duba.com/cps/go?f=lbaqg1&url=http%3A%2F%2Ftuan.duba.com%2F'},  
+                    {title:'电影票',img:'images/dianyingpiao.jpg',url:'http://tuan.duba.com/cps/go?f=lbaqg2&url=http%3A%2F%2Ftuan.duba.com%2Fdy%2F'},  
+                    {title:'美团',img:'images/meituan.jpg',url:'http://www.meituan.com'},  
+                    {title:'大众点评',img:'images/dazhongdianping.jpg',url:'http://t.dianping.com'},  
+                    {title:'去哪儿',img:'images/qunawang.jpg',url:'http://tuan.qunar.com/'},  
+                    {title:'携程',img:'images/xiecheng.jpg',url:'http://www.ctrip.com'},  
+                    {title:'机票预定',img:'images/jipiaoyuding.jpg',url:'http://flights.ctrip.com/'},  
+                    {title:'酒店预订',img:'images/jiudianyuding.jpg',url:'http://tuan.duba.com/cps/go?f=lbaqg3&url=http%3A%2F%2Ftuan.duba.com%2Fcategory%2F%3Fcateid%3D4%26subcateid2%3D40'}
+                ]
+            },
+            {
+                name:'网银支付',
+                data:[
+                    /* 12个栏目信息，下同*/
+                    {title:'支付宝',img:'images/zhifubao.jpg',url:'https://www.alipay.com/'},  
+					{title:'中国工商银行',img:'images/gongshang.jpg',url:'http://www.icbc.com.cn/icbc/',ccUrl:'http://www.icbc.com.cn/icbc/%e7%89%a1%e4%b8%b9%e5%8d%a1/default.htm',phone:95588},
+                    {title:'中国建设银行',img:'images/jianshe.jpg',url:'http://www.ccb.com/cn/home/index.html',ccUrl:'http://creditcard.ccb.com/',phone:95533},  
+				    {title:'中国农业银行',img:'images/nongye.jpg',url:'http://www.abchina.com/cn/',ccUrl:'http://www.abchina.com/cn/CreditCard/default.htm',phone:95599},
+					{title:'中国银行',img:'images/zhongguo.jpg',url:'http://www.boc.cn/',ccUrl:'http://www.boc.cn/bcservice/',phone:95566},  
+					{title:'中国邮政',img:'images/youzheng.jpg',url:'http://www.psbc.com/portal/zh_CN/index.html',ccUrl:'http://www.psbc.com/portal/zh_CN/CreditCard/index.html',phone:95580},  
+					{title:'交通银行',img:'images/jiaotong.jpg',url:'http://www.bankcomm.com/BankCommSite/cn/default.html',ccUrl:'http://creditcard.bankcomm.com/content/pccc/index.html',phone:95559}, 
+                    {title:'在线支付',img:'images/yinlian.jpg',url:'https://online.unionpay.com/portal/index.do'},
+					{title:'财付通',img:'images/caifutong.jpg',url:'https://www.tenpay.com/v2/'},                      
+                    {title:'招商银行',img:'images/zhaoshang.jpg',url:'http://www.cmbchina.com/',ccUrl:'http://creditcard.cmbchina.com/',phone:95555,type:1},  
+                    {title:'光大银行',img:'images/guangda.jpg',url:'http://www.cebbank.com/Site/ceb/cn',ccUrl:'http://xyk.cebbank.com/',phone:95595,type:1},            
+                    {title:'更多网银支付',img:'images/morebank.jpg',url:'#',moreBank:[
+                        {name:'主流网银',data:[
+ {name:'浦发银行',url:'http://www.spdb.com.cn/'},
+ {name:'民生银行',url:'http://www.cmbc.com.cn/'},
+ {name:'中信银行',url:'http://www.ecitic.com/'},
+ {name:'兴业银行',url:'http://www.cib.com.cn/'},
+ {name:'平安银行',url:'http://bank.pingan.com/'},
+ {name:'华夏银行',url:'http://www.hxb.com.cn/'},
+ {name:'广发银行',url:'http://www.cgbchina.com.cn/'},
+ {name:'北京农商银行',url:'http://www.bjrcb.com/'},
+ {name:'上海银行',url:'http://www.bankofshanghai.com/'},
+ {name:'上海农商银行',url:'http://www.srcb.com/'},
+ {name:'大连银行',url:'http://www.bankofdl.com/'},
+ {name:'南京银行',url:'http://www.njcb.com.cn/'},
+ {name:'中国人民银行',url:'http://www.pbc.gov.cn/'},
+ {name:'宁波银行',url:'http://www.nbcb.com.cn/'},
+ {name:'杭州银行',url:'http://www.hccb.com.cn/'},
+ {name:'河北银行',url:'http://www.sccb.com.cn/'},
+ {name:'吉林银行',url:'http://www.jlbank.com.cn/'},
+ {name:'齐鲁银行',url:'http://www.qlbchina.com/'},
+ {name:'北京银行',url:'http://www.bankofbeijing.com.cn/'},
+ {name:'内蒙古银行',url:'http://www.boimc.com.cn/'},
+ {name:'渣打银行',url:'http://www.standardchartered.com.cn/'},
+ {name:'东亚银行',url:'http://www.hkbea.com.cn/'},
+ {name:'花旗银行',url:'http://www.citibank.com.cn/'},
+ {name:'汇丰银行',url:'http://www.hsbc.com.cn/'},
+ {name:'渤海银行',url:'http://www.cbhb.com.cn/'},
+ {name:'华侨银行',url:'http://www.ocbc.com.cn'},
+ {name:'永亨银行',url:'http://www.whbcn.com/'},
+ {name:'美国银行',url:'http://www.bankofamerica.com/'},
+ {name:'宁夏银行',url:'http://www.ycccb.com/'},
+ {name:'恒生银行',url:'http://bank.hangseng.com/1/2/schi/home/home'}
+                        ]},
+                        {name:'地方网银',data:[
+ {name:'长沙银行',url:'http://www.cscb.cn/'},
+ {name:'哈尔滨银行',url:'http://www.hrbcb.com.cn/'},
+ {name:'湖北银行荆州分行',url:'http://www.jzbank.cn/'},
+ {name:'天津银行',url:'http://www.tccb.com.cn/'},
+ {name:'天津农商银行',url:'http://www.trcb.net.cn/'},
+ {name:'广州银行',url:'http://www.gzcb.com.cn/'},
+ {name:'广州农商银行',url:'http://www.grcbank.com/'},
+ {name:'东莞银行',url:'http://www.dongguanbank.cn/'},
+ {name:'成都银行',url:'http://www.bocd.com.cn/'},
+ {name:'成都农商银行',url:'http://www.cdrcb.com/'},
+ {name:'重庆银行',url:'http://www.cqcbank.com/'},
+ {name:'富滇银行',url:'http://www.fudian-bank.com/'},
+ {name:'包商银行',url:'http://www.bsb.com.cn/'},
+ {name:'华融湘江银行',url:'http://www.hrxjbank.com.cn/'},
+ {name:'浙商银行',url:'http://www.czbank.com'},
+ {name:'温州银行',url:'http://www.wzcb.com.cn/'},
+ {name:'南昌银行',url:'http://www.nccbank.com.cn/'},
+ {name:'九江银行',url:'http://www.jjccb.com/'},
+ {name:'上饶银行',url:'http://www.srbank.cn/'},
+ {name:'鞍山银行',url:'http://www.bankofas.com/'},
+ {name:'苏州银行',url:'http://www.suzhoubank.com/'},
+ {name:'东营银行',url:'http://www.dyccb.net/'},
+ {name:'嘉兴银行',url:'http://www.jxccb.com/'},
+ {name:'贵阳银行',url:'http://gycbank.com/'},
+ {name:'莱商银行',url:'http://www.lsbankchina.com/'},
+ {name:'晋城银行',url:'http://www.jccbank.com.cn/'},
+ {name:'绍兴银行',url:'http://www.sxccb.com/'},
+ {name:'鄂尔多斯银行',url:'http://www.ordosbank.com/'},
+ {name:'邢台银行',url:'http://www.xtbank.com/'},
+ {name:'晋商银行',url:'http://www.jshbank.com/cms/'},
+ {name:'营口银行',url:'http://www.bankofyk.com/'},
+ {name:'常熟农商银行',url:'http://www.csrcbank.com/'},
+ {name:'德阳银行',url:'http://www.dyccb.com/'},
+ {name:'福建海峡银行',url:'http://www.fjhxbank.com/'},
+ {name:'桂林银行',url:'http://www.guilinbank.com.cn/'},
+ {name:'恒丰银行',url:'http://www.egbank.com/'},
+ {name:'湖州银行',url:'http://www.hzccb.net/'},
+ {name:'辽阳银行',url:'http://www.bankofliaoyang.net/'},
+ {name:'廊坊银行',url:'https://ebank.lccb.com.cn/perbank/'},
+ {name:'龙江银行',url:'http://www.lj-bank.com/'},
+ {name:'青岛银行',url:'http://www.qdccb.com/'},
+ {name:'齐商银行',url:'http://www.qsbank.cc/'},
+ {name:'顺德农商银行',url:'http://www.sdebank.com/'},
+ {name:'台州银行',url:'http://www.tzbank.com/'},
+ {name:'吴江农商银行',url:'http://www.wjrcb.com/'},
+ {name:'徽商银行',url:'http://www.hsbank.com.cn/'},
+ {name:'长安银行',url:'http://www.ccabchina.com/'},
+ {name:'济宁银行',url:'http://www.jn-bank.com/'}
+                        ]},
+                        {name:'商业银行',data:[
+ {name:'深圳农村商业银行',url:'http://www.961200.net/'},
+ {name:'东莞农村商业银行',url:'http://www.drcbank.com/'},
+ {name:'江南农村商业银行',url:'http://www.jnbank.cc/'},
+ {name:'重庆农村商业银行',url:'http://www.cqrcb.com/'},
+ {name:'浙江泰隆商业银行',url:'http://www.zjtlcb.com/'},
+ {name:'晋中市商业银行',url:'http://www.jzbank.com/'},
+ {name:'浙江民泰商业银行',url:'http://www.mintaibank.com/'},
+ {name:'浙江稠州商业银行',url:'http://www.czcb.com.cn/'},
+ {name:'张家港农村商业银行',url:'http://www.zrcbank.com/'},
+ {name:'乌鲁木齐市商业银行',url:'http://www.uccb.com.cn/'},
+ {name:'遵义市商业银行',url:'http://www.zyccb.com/'},
+ {name:'自贡市商业银行',url:'http://www.zgbank.com.cn/'},
+ {name:'太仓农村商业银行',url:'http://www.tcrcb.com/'}
+                        ]},
+                        {name:'农村信用社',data:[
+ {name:'浙江农信',url:'http://www.zj96596.com/default.shtml'},
+ {name:'安徽农村信用社联合社',url:'http://www.ahrcu.com/'},
+ {name:'福建农村信用社',url:'http://www.fjnx.com.cn/'},
+ {name:'广东农村信用社',url:'http://www.gdrcu.com/'},
+ {name:'广西农村信用社',url:'http://www.gx966888.com/'},
+ {name:'河南农村信用社',url:'http://www.hnnx.com/'},
+ {name:'湖南农村信用联合社',url:'http://www.hnnxs.com/'},
+ {name:'河北省农村信用社',url:'http://www.hebnx.com/'},
+ {name:'湖北农村信用社',url:'http://www.hbxh.com.cn/'},
+ {name:'海南省农村信用社',url:'http://www.hainanbank.com.cn/'},
+ {name:'江苏农村信用社联合社',url:'http://www.js96008.com/'},
+ {name:'吉林省农村信用社',url:'http://www.jlnls.com/'},
+ {name:'辽宁省农村信用社',url:'http://www.lnrcu.com/'},
+ {name:'山东省农村信用社',url:'http://www.sdnxs.com/'},
+ {name:'四川农村信用社',url:'http://www.scrcu.com.cn/'},
+ {name:'山西农村信用社',url:'http://www.shanxinj.com/'},
+ {name:'陕西农村信用社',url:'http://www.sxnxs.com/'},
+ {name:'内蒙古农村信用社',url:'http://www.nmgnxs.com.cn/zzqnxs/'},
+ {name:'云南省农村信用社',url:'http://www.ynrcc.com/'},
+ {name:'甘肃省农村信用社',url:'http://www.gsrcu.com/'}
+                        ]},
+                        {name:'电子支付',data:[
+ {name:'易宝支付',url:'http://www.yibao.com/'},
+ {name:'付费通',url:'https://www.shfft.com/'},
+ {name:'首信易',url:'http://www.beijing.com.cn/'},
+ {name:'百付宝',url:'https://www.baifubao.com/'},
+ {name:'中国银联',url:'http://cn.unionpay.com/'},
+ {name:'移动手机支付',url:'https://cmpay.10086.cn/index.xhtml'},
+ {name:'环讯支付',url:'http://www.ips.com.cn/'},
+ {name:'翼支付',url:'https://www.bestpay.com.cn/main/index.html'},
+ {name:'盛付通',url:'https://www.shengpay.com/'},
+ {name:'拉卡拉',url:'http://www.lakala.com/'},
+ {name:'贝宝(paypal)',url:'https://www.paypal.com/cn'},
+ {name:'信付通',url:'http://www.cardinfo.com.cn/'},
+ {name:'新付通',url:'https://pay.sina.com.cn/index'},
+ {name:'诚信通',url:'http://cxt.china.alibaba.com/'},
+ {name:'乐刷',url:'http://www.yeahka.com/'},
+ {name:'网易宝',url:'https://epay.163.com/'}
+                        ]},
+                        {name:'港澳台银行',data:[
+ {name:'永亨銀行',url:'http://www.whbhk.com/'},
+ {name:'永隆銀行',url:'http://www.winglungbank.com/'},
+ {name:'星展銀行',url:'http://www.dbs.com.hk/'},
+ {name:'大眾銀行',url:'http://www.publicbank.com.hk/'},
+ {name:'集友銀行',url:'http://www.chiyubank.com/'},
+ {name:'大新銀行',url:'http://www.dahsing.com/'},
+ {name:'創興銀行',url:'http://www.chbank.com/'},
+ {name:'南洋商業銀行',url:'http://www.ncb.com.hk/'},
+ {name:'大生银行',url:'http://www.taisangbank.com.hk/'},
+ {name:'大西洋銀行',url:'http://www.bnu.com.mo/'},
+ {name:'大豐銀行',url:'http://www.taifungbank.com/'},
+ {name:'滙業銀行',url:'http://www.delta-asia.com/'},
+ {name:'澳門國際銀行',url:'http://www.lusobank.com.mo/'},
+ {name:'澳门商業銀行',url:'http://www.bcm.com.mo/'},
+ {name:'台湾銀行',url:'http://www.bot.com.tw/'},
+ {name:'第一銀行',url:'http://www.firstbank.com.tw/'},
+ {name:'華南銀行',url:'http://www.hncb.com.tw/'},
+ {name:'台北富邦銀行',url:'http://www.fubon.com/'},
+ {name:'國泰世華銀行',url:'https://www.cathaybk.com.tw/'},
+ {name:'兆豐國際商銀銀行',url:'https://www.megabank.com.tw/'},
+ {name:'新光商業銀行',url:'https://www.skbank.com.tw/'},
+ {name:'永豐銀行',url:'http://www.banksinopac.com.tw/'},
+ {name:'玉山銀行',url:'http://www.esunbank.com.tw/'},
+ {name:'萬泰銀行',url:'https://www.cosmosbank.com.tw/'},
+ {name:'台新銀行',url:'https://www.taishinbank.com.tw/'},
+ {name:'日盛國際商業銀行',url:'http://www.jihsunbank.com.tw/'},
+ {name:'中國信託商業銀行',url:'https://ecorp.chinatrust.com.tw/'}
+                        ]}
+                    ]}
+                ]
+            }
+        ]
+    </script>
+	<script type="text/javascript" src="js/common.js"></script>
+  <div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+</div>
+</body>
+</html>

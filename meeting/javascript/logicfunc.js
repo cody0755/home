@@ -2,8 +2,8 @@
  *				业务逻辑控制				*
  *******************************************/
  
-var mDefaultServerAddr = "218.6.198.205";		// 默认服务器地址
-var mDefaultServerPort = 9080;					// 默认服务器端口号
+var mDefaultServerAddr = "222.73.56.79";//"218.6.198.205";		// 默认服务器地址
+var mDefaultServerPort = "8906";//9080;					// 默认服务器端口号
 var mSelfUserId = -1; 							// 本地用户ID
 var mTargetUserId = -1;							// 目标用户ID（请求了对方的音视频）
 var mRefreshVolumeTimer = -1; 					// 实时音量大小定时器

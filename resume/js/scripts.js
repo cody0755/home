@@ -781,9 +781,9 @@ $(function() {
 	initLayoutHelpers();
 	searchForPageLinks();
 	
-	if (localChrome) {
+	//if (localChrome) {
 		initContent();
-	}
+	//}
 	
 	$('body').attr('data-page-transition', settings.pageTransition);
 	

@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0; padding:0:}
+ul, ol {list-style:none}
+img{border:0;}
+body{ font-family:"微软雅黑"; text-align:center;}
+.clear { float:none;}
+/*****/
+.main{ background:url(bg.jpg) no-repeat; width:540px; height:377px; margin:0 auto; text-align:left;}
+.content{width:505px; height:332px;padding-top:16px; margin-left:15px;}
+.content h2{ font-size:14px; color:#302D2D; height:42px; line-height:42px; padding-left:15px;}
+.content .text{ padding-left:15px; margin-right:10px;}
+.content .text input{ background:#EEDDCC; border:#956137 solid 1px; height:18px; padding:3px; line-height:18px; width:200px; font-size:12px; font-family:"宋体";}
+.content .select{ font-size:13px;}
+.content .select select{background:#EEDDCC; border:#956137 solid 1px; height:22px; line-height:22px; width:50px;}
+.button a{background:url(but.gif) no-repeat; width:70px; height:27px; text-align:center; line-height:27px; text-decoration:none; font-size:13px; font-weight:bold; display:inline-block; margin:0 5px; color:#FFF;}
+.button a:hover{ color:#FF0;}
+.button a:active{ color:#FC0;}
+.table_xx {width:100%; border:0; margin-top:28px; font-family:"宋体"; font-size:12px;}
+.table_xx tr td,.table_xx tr th{ height:41px; line-height:41px;}
+.table_xx tr th{color:#6B6A6A; font-weight:normal; text-align:center;}
+.table_xx .a1{ text-align:center; color:#904C0D; font-weight:bold; }
+.table_xx .b2{ padding-left:10px; color:#333; font-size:13px;}
+.table_xx .c3{ text-align:center;}
+.b2 input{background:none; border:none; height:25px; line-height:25px; width:320px;}

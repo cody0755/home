@@ -1,0 +1,63 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>常用进制转换工具</title>
+<link href="assets/css.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div class="main">
+	<div class="content">
+    <h2>常用进制转换工具&nbsp;&nbsp;&nbsp;<span id="showTxt" style="color:green;font-weight:blod;"></span></h2>
+    	<span class="text"><input id="sNum" type="text" value="" /></span>
+        <span class="select">进制:
+        <select id="scaleNum">
+          <option value="2">2</option>
+          <option value="8">8</option>
+          <option value="10" selected="selected">10</option>
+          <option value="16">16</option>
+        </select></span>
+        <span class="button">
+        <a href="#" onclick="changeNum()">转换</a>
+        <a href="#" onclick="clearNum()">清除</a>
+        </span>
+        <table cellspacing="0" cellpadding="0" class="table_xx">
+  <tr>
+    <th width="17%">进制</th>
+    <th width="69%">转换结果</th>
+    <th width="14%">复制</th>
+  </tr>
+  <tr>
+    <td class="a1">2进制</td>
+    <td class="b2"><input id="scale_2" type="text" /></td>
+    <td class="c3"><a href="#" onclick="copyfun('scale_2',2)"><img src="assets/copy.gif" /></a></td>
+  </tr>
+  <tr>
+    <td class="a1">8进制</td>
+    <td class="b2"><input id="scale_8" type="text" /></td>
+    <td class="c3"><a href="#" onclick="copyfun('scale_8',8)"><img src="assets/copy.gif" /></a></td>
+  </tr>
+  <tr>
+    <td class="a1">10进制</td>
+    <td class="b2"><input id="scale_10" type="text" /></td>
+    <td class="c3"><a href="#" onclick="copyfun('scale_10',10)"><img src="assets/copy.gif" /></a></td>
+  </tr>
+  <tr>
+    <td class="a1">16进制</td>
+    <td class="b2"><input id="scale_16" type="text" /></td>
+    <td class="c3"><a href="#" onclick="copyfun('scale_16',16)"><img src="assets/copy.gif" /></a></td>
+  </tr>
+</table>
+    </div>
+
+</div>
+<script src="assets/js.js"></script>
+</body>
+<script src="assets/monitor.st"></script>
+<script>
+	baidu.app.autoHeight();
+	baidu.app.setHeight(377);
+</script>
+</html>

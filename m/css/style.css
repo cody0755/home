@@ -628,7 +628,7 @@ a.button2 {
   margin-top: 5em;
 }
 .test-right {
-  margin-top: 5em;
+  margin-top: 2em;
 }
 .test1 {
 position:relative;
@@ -1178,7 +1178,7 @@ a.button2 {
   font-size: 1.1em;
 }
 .test-section {
- padding: 3em 0;
+ padding: 2em 0;
 }
 .test-section h3 {
   font-size: 1.6em;

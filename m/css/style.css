@@ -1185,8 +1185,6 @@ a.button2 {
   margin: 0 0 1em 0.9em;
  }
 .test-left {
-  float: left;
-  width: 50%;
 }
 .half-right {
   float: left;

@@ -335,7 +335,7 @@ nav a:focus {
 }
 .service-section {
   text-align: center;
-  padding: 4em 0;
+  padding: 2em 0;
   background: #f2f0ec url(../images/pattern.png) repeat;
 }
 .service-section h2 {
@@ -350,9 +350,8 @@ nav a:focus {
 .service-section p {
   font-size: 1.5em;
   width: 70%;
-  margin: 0 auto 2.5em;
+  margin: 0 auto 1em;
   color: #fb4b4b;
-  line-height: 1.8em;
  
 }
 a.button1 {
@@ -587,14 +586,14 @@ a.button2 {
 }
 .test-section {
   background: #fb4b4b;
-  padding: 4em 0;
+  padding: 1.5em 0;
 }
 .test-section h3 {
   font-size: 2.5em;
   text-transform: uppercase;
   color: #fff;
   font-weight: 600;
-   margin: 0 0 1em 0.5em;
+   margin: 0 0 0.5em 0.5em;
     font-family: 'Roboto Slab', serif;
 }
 .test-left img {
@@ -606,11 +605,12 @@ a.button2 {
 .test-right h4 {
   font-size: 2em;
   color: #fff;
-  margin-bottom: 0.5em;
+  margin: 0.2em 0px;
   font-weight: 600;
 }
 .test-right p {
   font-size: 1.2em;
+  margin: 0.3em 0px;
   color: #fff;
  }
 .test-left01 h4 {
@@ -901,15 +901,6 @@ transition: all 0.7s ease;
 .top-menu ul li a {
   font-size: 1.2em;
 }
-.service-section h2 {
-  font-size: 2em;
-    width: 47%
-}
- .service-section p {
-  font-size: 1.2em;
-  width: 70%;
-  margin: 0 auto 2em;
-}
 a.button1 {
   font-size: 1.3em;
   text-transform: uppercase;
@@ -1073,9 +1064,7 @@ a.button2 {
 .caption h3 {
   font-size: 1.5em;
 }
-.service-section {
-  padding: 3em 0;
-}
+
 .service-section h2 {
   font-size: 1.5em;
   width: 45%;
@@ -1507,7 +1496,7 @@ span.menu {
   padding: 1em 0;
 }
 .service-section {
-  padding: 2em 0;
+  padding: 1em 0;
 }
 .service-section h2 {
   font-size: 1.2em;

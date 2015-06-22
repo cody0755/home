@@ -27,8 +27,7 @@ ul{
 }
 body{
 	padding:0 0;
-	margin:0 0; 
-	font-family: 'Open Sans', sans-serif;}
+	margin:0 0; }
 .logo a {
   font-size: 5em;
   text-transform: uppercase;
@@ -150,6 +149,7 @@ ul.callbacks_tabs.callbacks1_tabs {
   background-position: right top;
   right: 0;
  }
+ 
 /*-- responsive-mediaquries --*/
 @media(max-width:1024px){
 	.caption {
@@ -158,6 +158,7 @@ ul.callbacks_tabs.callbacks1_tabs {
 		left: 19%;
 	}
 }
+
 @media(max-width:768px){
 	.caption {
 		width: 70%;
@@ -174,6 +175,7 @@ ul.callbacks_tabs.callbacks1_tabs {
 	  	top: 55%;
 	 }
 }
+
 @media(max-width:640px){
 	.caption {
 		width: 70%;
@@ -221,6 +223,9 @@ ul.callbacks_tabs.callbacks1_tabs {
 		left: 4px;
 	}
 }
+
+
+
 @media(max-width:320px){
 	.caption {
 		width: 70%;
@@ -586,50 +591,39 @@ a.button2 {
 }
 .test-section {
   background: #fb4b4b;
-  padding: 1.5em 0;
 }
 .test-section h3 {
   font-size: 2.5em;
   text-transform: uppercase;
   color: #fff;
   font-weight: 600;
-   margin: 0 0 0.5em 0.5em;
-    font-family: 'Roboto Slab', serif;
+  
+  margin: 0.5em 0px;
 }
+
+.test-section h4 {
+  font-size: 1.8em;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 500;
+  margin:0.2em 0;
+}
+
+.test-section p {
+  font-size: 1.5em;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 300;
+  margin:0.5em 0;
+}
+
 .test-left img {
   border-radius: 2px;
 }
 .test-right01 img {
   border-radius: 2px;
 }
-.test-right h4 {
-  font-size: 2em;
-  color: #fff;
-  margin: 0.2em 0px;
-  font-weight: 600;
-}
-.test-right p {
-  font-size: 1.2em;
-  margin: 0.3em 0px;
-  color: #fff;
- }
-.test-left01 h4 {
-  font-size: 2em;
-  color: #fff;
-  margin-bottom: 0.5em;
-  font-weight: 600;
-}
-.test-left01 p {
-  font-size: 1.2em;
-  color: #fff;
-}
 
-.test-left01 {
-  margin-top: 5em;
-}
-.test-right {
-  margin-top: 2em;
-}
 .test1 {
 position:relative;
 overflow:hidden;
@@ -975,10 +969,6 @@ a.button1 {
 a.button2 {
   font-size: 1.3em;
 }
- .test-section h3 {
-  font-size: 2em;
- margin: 0 0 1em 0.5em;
-}
  .test1 .textbox {
   width: 360px;
 }
@@ -1167,12 +1157,21 @@ a.button2 {
   font-size: 1.1em;
 }
 .test-section {
- padding: 2em 0;
+ padding:  0;
 }
 .test-section h3 {
-  font-size: 1.6em;
-  margin: 0 0 1em 0.9em;
+  font-size: 1.8em;
+  margin: 0.5em 0px;
  }
+
+.test-section h4 {
+  font-size: 1.6em;
+}
+
+.test-section p {
+  font-size: 1.2em;
+} 
+ 
 .test-left {
 }
 .half-right {
@@ -1372,10 +1371,6 @@ a.button1 {
 a.button2 {
   font-size: 1em;
   padding: 0.5em 1em;
-}
-.test-section h3 {
-  font-size: 1.4em;
-  margin-bottom: 0.5em;
 }
 .test1 .textbox {
   width: 266px;
@@ -1592,11 +1587,21 @@ a.button2 {
   font-size: 0.9em;
  }
  .test-section {
-  padding: 2em 0;
+  padding:  0;
 }
 .test-section h3 {
-  font-size: 1.2em;
+  font-size: 1.5em;
+  margin: 0.5em 0px;
  }
+.test-section h4 {
+  font-size: 1.4em;
+}
+.test-section p {
+  font-size: 1.2em;
+} 
+  
+ 
+ 
 .test1 .textbox {
   width: 187px;
 }
@@ -1808,7 +1813,8 @@ a.button2 {
 }
 .test-section h3 {
   font-size: 1em;
-  margin: 0 0 1em 0.5em;
+  
+  margin: 0.5em 0px;
 }
 .test-left {
   float: none;
